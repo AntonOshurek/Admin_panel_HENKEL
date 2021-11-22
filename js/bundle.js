@@ -37,6 +37,53 @@ function showMenuItems() {
 }
 ;
 
+/***/ }),
+
+/***/ "./source/scripts/show-mobile-menu.js":
+/*!********************************************!*\
+  !*** ./source/scripts/show-mobile-menu.js ***!
+  \********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ showMobileMenu; }
+/* harmony export */ });
+function showMobileMenu() {
+  const body = document.querySelector('.body');
+  const navBtn = document.querySelector('.nav__btn');
+  const navBtnBurger = document.querySelector('.nav__btn-burger');
+  const menu = document.querySelector('.menu');
+  let navOpen = false;
+  navBtn.addEventListener('click', () => {
+    if (!navOpen) {
+      openNavigation();
+    } else {
+      closeNavigation();
+    }
+  });
+
+  function openNavigation() {
+    navBtn.classList.add('nav__btn--open');
+    navBtnBurger.classList.add('nav__btn-burger--open');
+    menu.classList.add('menu--open');
+    body.classList.add('body--scrolloff');
+    navOpen = true;
+  }
+
+  ;
+
+  function closeNavigation() {
+    navBtn.classList.remove('nav__btn--open');
+    navBtnBurger.classList.remove('nav__btn-burger--open');
+    menu.classList.remove('menu--open');
+    body.classList.remove('body--scrolloff');
+    navOpen = false;
+  }
+
+  ;
+}
+
 /***/ })
 
 /******/ 	});
@@ -103,9 +150,12 @@ var __webpack_exports__ = {};
   \*********************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _show_menu_items__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./show-menu-items */ "./source/scripts/show-menu-items.js");
+/* harmony import */ var _show_mobile_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./show-mobile-menu */ "./source/scripts/show-mobile-menu.js");
+
 
 window.addEventListener('DOMContentLoaded', () => {
   (0,_show_menu_items__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  (0,_show_mobile_menu__WEBPACK_IMPORTED_MODULE_1__["default"])();
 });
 }();
 /******/ })()
