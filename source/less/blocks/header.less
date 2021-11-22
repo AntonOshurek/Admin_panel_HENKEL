@@ -5,11 +5,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+  }
 }
 
 .header__logo {
   width: 140px;
   height: 80px;
+
+  @media (max-width: @tablet-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
 }
 
 .header__enter-btn {
@@ -25,6 +36,10 @@
 
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   transition: 0.4s all;
+
+  @media (max-width: @tablet-width) {
+    justify-self: end;
+  }
 
   &:hover,
   &:focus{
