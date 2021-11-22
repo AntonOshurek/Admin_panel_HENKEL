@@ -17,9 +17,7 @@
     "url": "https://github.com/AntonOshurek/My__Webpack--BUild/issues"
   },
   "browserslist": [
-    "last 2 versions",
-    "not dead",
-    "not ie <= 11"
+    "> 1%"
   ],
   "engines": {
     "node": "^12 || ^14"
