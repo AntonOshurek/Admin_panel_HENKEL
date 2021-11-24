@@ -1,12 +1,9 @@
 const gulp = require('gulp'),
-      plumber = require('gulp-plumber'),
       sourcemap = require('gulp-sourcemaps'),
       less = require('gulp-less'),
       postcss = require('gulp-postcss'),
       autoprefixer = require('autoprefixer'),
       sync = require('browser-sync').create(),
-      htmlmin = require('gulp-htmlmin'),
-      csso = require('postcss-csso'),
       rename = require('gulp-rename'),
       squoosh = require('gulp-libsquoosh'),
       webp = require("gulp-webp"),
@@ -16,12 +13,9 @@ const gulp = require('gulp'),
 // Styles
 const styles = () => {
   return gulp.src('source/less/style.less')
-    .pipe(plumber())
-    .pipe(sourcemap.init())
     .pipe(less())
     .pipe(postcss([
-      autoprefixer(),
-      csso()
+      autoprefixer()
     ]))
     .pipe(rename('style.min.css'))
     .pipe(sourcemap.write("."))
