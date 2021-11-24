@@ -22,7 +22,7 @@
 <body class="body">
   <header class="header">
     <img class="header__logo" src="img/henkel-logo.png" alt="henkel logo" width="120px" height="60px">
-    <button class="header__enter-btn" type="button">zaloguj się</button>
+    <button class="header__enter-btn" type="button">выйти</button>
   </header>
   <main class="main">
     <div class="nav__btn-wrap">
@@ -78,6 +78,7 @@
            3.531-3.079l5.436.885c1.95.268 2.683-.866 1.635-2.533z"/>
         </svg>
       </a>
+      <h2 class="item-inners__title">Название документа</h2>
       <ul class="item-list">
         <li class="item-list__elem">
           <button class="item-list__open-button" data-inner-name='info' type="button">informacje biezące
@@ -86,10 +87,16 @@
             </svg>
           </button>
           <div class="item-list__content info">
-            <p>content</p>
-            <p>content</p>
-            <p>content</p>
-            <p>content</p>
+            <table class="content-table">
+              <tr class="content-table__row">
+                <td class="content-table__item"> row 1 column 1 очень много текста контента</td>
+                <td class="content-table__item">row 1 column 2</td>
+              </tr>
+              <tr class="content-table__row">
+                <td class="content-table__item"> row 2 column 1</td>
+                <td class="content-table__item">row 2 column 2</td>
+              </tr>
+            </table>
           </div>
         </li>
         <li class="item-list__elem">
@@ -99,7 +106,16 @@
             </svg>
           </button>
           <div class="item-list__content title">
-            <p>content</p>
+            <table class="content-table">
+              <tr class="content-table__row">
+                <td class="content-table__item"> row 1 column 1 очень много текста контента</td>
+                <td class="content-table__item">row 1 column 2</td>
+              </tr>
+              <tr class="content-table__row">
+                <td class="content-table__item"> row 2 column 1</td>
+                <td class="content-table__item">row 2 column 2</td>
+              </tr>
+            </table>
           </div>
         </li>
         <li class="item-list__elem">
@@ -109,7 +125,16 @@
             </svg>
           </button>
           <div class="item-list__content other">
-            <p>content</p>
+            <table class="content-table">
+              <tr class="content-table__row">
+                <td class="content-table__item"> row 1 column 1 очень много текста контента</td>
+                <td class="content-table__item">row 1 column 2</td>
+              </tr>
+              <tr class="content-table__row">
+                <td class="content-table__item"> row 2 column 1</td>
+                <td class="content-table__item">row 2 column 2</td>
+              </tr>
+            </table>
           </div>
         </li>
       </ul>
