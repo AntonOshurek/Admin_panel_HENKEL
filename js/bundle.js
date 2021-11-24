@@ -2,6 +2,42 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./source/scripts/open-item-inners-props.js":
+/*!**************************************************!*\
+  !*** ./source/scripts/open-item-inners-props.js ***!
+  \**************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ openItemInnersProps; }
+/* harmony export */ });
+function openItemInnersProps() {
+  const showItemButton = document.querySelectorAll('.item-list__open-button');
+  const showElements = document.querySelectorAll('.item-list__content');
+  let tabName;
+
+  function selectTabNav() {
+    tabName = this.getAttribute('data-inner-name');
+    this.querySelector('.item-list__open-icon').classList.toggle('item-list__open-icon--open');
+    selectTabContent(tabName);
+  }
+
+  function selectTabContent(tabName) {
+    showElements.forEach(item => {
+      if (item.classList.contains(tabName)) {
+        item.classList.toggle('item-list__content--open');
+      }
+    });
+  }
+
+  showItemButton.forEach(btn => {
+    btn.addEventListener('click', selectTabNav);
+  });
+}
+
+/***/ }),
+
 /***/ "./source/scripts/show-menu-items.js":
 /*!*******************************************!*\
   !*** ./source/scripts/show-menu-items.js ***!
@@ -50,7 +86,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": function() { return /* binding */ showMobileMenu; }
 /* harmony export */ });
 function showMobileMenu() {
-  const body = document.querySelector('.body');
   const navBtn = document.querySelector('.nav__btn');
   const navBtnBurger = document.querySelector('.nav__btn-burger');
   const menu = document.querySelector('.menu');
@@ -67,7 +102,6 @@ function showMobileMenu() {
     navBtn.classList.add('nav__btn--open');
     navBtnBurger.classList.add('nav__btn-burger--open');
     menu.classList.add('menu--open');
-    body.classList.add('body--scrolloff');
     navOpen = true;
   }
 
@@ -77,7 +111,6 @@ function showMobileMenu() {
     navBtn.classList.remove('nav__btn--open');
     navBtnBurger.classList.remove('nav__btn-burger--open');
     menu.classList.remove('menu--open');
-    body.classList.remove('body--scrolloff');
     navOpen = false;
   }
 
@@ -151,11 +184,14 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _show_menu_items__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./show-menu-items */ "./source/scripts/show-menu-items.js");
 /* harmony import */ var _show_mobile_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./show-mobile-menu */ "./source/scripts/show-mobile-menu.js");
+/* harmony import */ var _open_item_inners_props__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./open-item-inners-props */ "./source/scripts/open-item-inners-props.js");
+
 
 
 window.addEventListener('DOMContentLoaded', () => {
   (0,_show_menu_items__WEBPACK_IMPORTED_MODULE_0__["default"])();
   (0,_show_mobile_menu__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  (0,_open_item_inners_props__WEBPACK_IMPORTED_MODULE_2__["default"])();
 });
 }();
 /******/ })()
