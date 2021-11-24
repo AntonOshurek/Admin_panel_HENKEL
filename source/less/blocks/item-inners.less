@@ -1,14 +1,23 @@
 .item-inners {
+  max-width: 100%;
   padding: 20px;
   display: grid;
   grid-template-rows: min-content 1fr;
-  grid-template-columns: min-content 1fr;
+  grid-template-columns: 1fr;
   grid-row-gap: 25px;
 }
 
+.item-inners__controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .item-inners__title {
-  align-self: center;
-  justify-self: center;
+  flex-grow: 1;
+  text-align: center;
   font-size: 22px;
   font-weight: bold;
   text-transform: capitalize;
@@ -43,14 +52,15 @@
 }
 
 .item-list {
-  grid-column-start: 1;
-  grid-column-end: -1;
+  height: 100%;
+  max-width: 100%;
+  overflow: auto;
   align-content: start;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-  overflow: auto;
+
 
   @media (max-width: @mobile-width) {
     justify-content: center;
@@ -59,7 +69,7 @@
 
 .item-list__elem {
   list-style: none;
-  min-width: 300px;
+  min-width: 350px;
   max-width: 350px;
   height: min-content;
   border-radius: 6px;
@@ -77,13 +87,11 @@
 
 .item-list__content {
   overflow: auto;
-  height: 1px;
-  transition: all 0.5s ease-in-out;
+  height: 0px;
 
   &--open {
     height: min-content;
     max-width: 100%;
-    transition: all 0.5s ease-in-out;
   }
 }
 
