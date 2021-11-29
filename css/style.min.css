@@ -30,6 +30,11 @@
   justify-content: space-between;
   align-items: center;
 }
+.header--item-inners {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
 @media (max-width: 900px) {
   .header {
     display: grid;
@@ -40,6 +45,10 @@
 .header__logo {
   width: 140px;
   height: 80px;
+}
+.header__logo--item-inners {
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 @media (max-width: 900px) {
   .header__logo {
@@ -59,6 +68,9 @@
   cursor: pointer;
   box-shadow: 0 3px 10px rgb(0 0 0);
   transition: 0.4s all;
+}
+.header__enter-btn--item-inners {
+  justify-self: end;
 }
 @media (max-width: 900px) {
   .header__enter-btn {
@@ -95,6 +107,12 @@
     opacity: 0;
     pointer-events: none;
   }
+}
+.menu--item-inners {
+  width: 1px;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
 }
 .menu--open {
   width: 280px;
@@ -162,6 +180,9 @@
   left: 0;
   display: none;
 }
+.nav__btn-wrap--item-inners {
+  display: block;
+}
 @media (max-width: 900px) {
   .nav__btn-wrap {
     display: block;
@@ -221,7 +242,6 @@
 }
 .item-inners {
   max-width: 100%;
-  padding: 20px;
   display: grid;
   grid-template-rows: min-content 1fr;
   grid-template-columns: 1fr;
@@ -229,6 +249,8 @@
 }
 .item-inners__controls {
   width: 100%;
+  min-width: min-content;
+  padding: 5px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -268,27 +290,31 @@
 }
 .item-list {
   height: 100%;
-  max-width: 100%;
-  overflow: auto;
+  width: 100%;
+  overflow-y: scroll;
   align-content: start;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  padding: 10px 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 15px;
+  grid-column-gap: 15px;
+}
+@media (max-width: 900px) {
+  .item-list {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media (max-width: 600px) {
   .item-list {
-    justify-content: center;
+    grid-template-columns: 1fr;
   }
 }
 .item-list__elem {
   list-style: none;
-  min-width: 350px;
-  max-width: 350px;
+  min-width: 300px;
   height: min-content;
   border-radius: 6px;
   outline: 3px solid #808080;
-  margin: 15px;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
 }
 .item-list__content {

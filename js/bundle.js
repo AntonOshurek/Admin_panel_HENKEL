@@ -15,7 +15,15 @@ __webpack_require__.r(__webpack_exports__);
 function openItemInnersProps() {
   const showItemButton = document.querySelectorAll('.item-list__open-button');
   const showElements = document.querySelectorAll('.item-list__content');
+  const MOBILE_WIDTH = 600;
   let tabName;
+  const pageWidth = window.getComputedStyle(document.querySelector('body')).width.replace(/[^\d.-]/g, '');
+
+  if (Math.floor(pageWidth) <= MOBILE_WIDTH) {
+    showElements.forEach(item => {
+      item.classList.remove('item-list__content--open');
+    });
+  }
 
   function selectTabNav() {
     tabName = this.getAttribute('data-inner-name');

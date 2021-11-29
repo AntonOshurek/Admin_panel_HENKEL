@@ -5,14 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--FONTS-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Ubuntu+Mono:ital@1&display=swap" rel="stylesheet">
-    <!--
-      font-family: 'Roboto', sans-serif;
-    -->
-
     <!--Icon library-->
     <script src="https://use.fontawesome.com/2c95925cd0.js"></script>
 
@@ -20,18 +12,18 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="body">
-  <header class="header">
-    <img class="header__logo" src="img/henkel-logo.png" alt="henkel logo" width="120px" height="60px">
-    <button class="header__enter-btn" type="button">выйти</button>
+  <header class="header header--item-inners">
+    <img class="header__logo header__logo--item-inners" src="img/henkel-logo.png" alt="henkel logo" width="120px" height="60px">
+    <button class="header__enter-btn header__enter-btn--item-inners" type="button">выйти</button>
   </header>
   <main class="main">
-    <div class="nav__btn-wrap">
+    <div class="nav__btn-wrap nav__btn-wrap--item-inners">
       <button class="nav__btn" type="button">
         <span class="visually-hidden">menu button</span>
         <span class="nav__btn-burger"></span>
       </button>
     </div>
-    <section class="menu">
+    <section class="menu menu--item-inners">
       <ul class="menu__list">
         <li class="menu__item">
           <button class="menu__button" data-tab-name='invest'>
@@ -88,7 +80,7 @@
               <path d="M19.9244 0.941467L21.9225 2.98927L4.90696 20.4361L21.978 37.9376L19.9789 39.9854L0.910614 20.4361L19.9244 0.941467Z" fill="white"/>
             </svg>
           </button>
-          <div class="item-list__content info">
+          <div class="item-list__content item-list__content--open info">
             <table class="content-table">
               <tr class="content-table__row">
                 <td class="content-table__item"> row 1 column 1 очень много текста контента</td>
@@ -107,7 +99,7 @@
               <path d="M19.9244 0.941467L21.9225 2.98927L4.90696 20.4361L21.978 37.9376L19.9789 39.9854L0.910614 20.4361L19.9244 0.941467Z" fill="white"/>
             </svg>
           </button>
-          <div class="item-list__content title">
+          <div class="item-list__content item-list__content--open title">
             <table class="content-table">
               <tr class="content-table__row">
                 <td class="content-table__item"> row 1 column 1 очень много текста контента</td>
@@ -126,7 +118,64 @@
               <path d="M19.9244 0.941467L21.9225 2.98927L4.90696 20.4361L21.978 37.9376L19.9789 39.9854L0.910614 20.4361L19.9244 0.941467Z" fill="white"/>
             </svg>
           </button>
-          <div class="item-list__content other">
+          <div class="item-list__content item-list__content--open other">
+            <table class="content-table">
+              <tr class="content-table__row">
+                <td class="content-table__item"> row 1 column 1 очень много текста контента</td>
+                <td class="content-table__item">row 1 column 2</td>
+              </tr>
+              <tr class="content-table__row">
+                <td class="content-table__item"> row 2 column 1</td>
+                <td class="content-table__item">row 2 column 2</td>
+              </tr>
+            </table>
+          </div>
+        </li>
+        <li class="item-list__elem">
+          <button class="item-list__open-button" data-inner-name='fooo' type="button">informacje biezące
+            <svg class="item-list__open-icon" aria-hidden="true" focusable="false" width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.9244 0.941467L21.9225 2.98927L4.90696 20.4361L21.978 37.9376L19.9789 39.9854L0.910614 20.4361L19.9244 0.941467Z" fill="white"/>
+            </svg>
+          </button>
+          <div class="item-list__content item-list__content--open fooo">
+            <table class="content-table">
+              <tr class="content-table__row">
+                <td class="content-table__item"> row 1 column 1 очень много текста контента</td>
+                <td class="content-table__item">row 1 column 2</td>
+              </tr>
+              <tr class="content-table__row">
+                <td class="content-table__item"> row 2 column 1</td>
+                <td class="content-table__item">row 2 column 2</td>
+              </tr>
+            </table>
+          </div>
+        </li>
+        <li class="item-list__elem">
+          <button class="item-list__open-button" data-inner-name='foo' type="button">informacje biezące
+            <svg class="item-list__open-icon" aria-hidden="true" focusable="false" width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.9244 0.941467L21.9225 2.98927L4.90696 20.4361L21.978 37.9376L19.9789 39.9854L0.910614 20.4361L19.9244 0.941467Z" fill="white"/>
+            </svg>
+          </button>
+          <div class="item-list__content item-list__content--open foo">
+            <table class="content-table">
+              <tr class="content-table__row">
+                <td class="content-table__item"> row 1 column 1 очень много текста контента</td>
+                <td class="content-table__item">row 1 column 2</td>
+              </tr>
+              <tr class="content-table__row">
+                <td class="content-table__item"> row 2 column 1</td>
+                <td class="content-table__item">row 2 column 2</td>
+              </tr>
+            </table>
+          </div>
+        </li>
+        <li class="item-list__elem">
+          <button class="item-list__open-button" data-inner-name='fo' type="button">informacje biezące
+            <svg class="item-list__open-icon" aria-hidden="true" focusable="false" width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.9244 0.941467L21.9225 2.98927L4.90696 20.4361L21.978 37.9376L19.9789 39.9854L0.910614 20.4361L19.9244 0.941467Z" fill="white"/>
+            </svg>
+          </button>
+          <div class="item-list__content item-list__content--open fo">
             <table class="content-table">
               <tr class="content-table__row">
                 <td class="content-table__item"> row 1 column 1 очень много текста контента</td>
