@@ -5,20 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--FONTS-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Ubuntu+Mono:ital@1&display=swap" rel="stylesheet">
-    <!--
-      font-family: 'Roboto', sans-serif;
-    -->
-
     <title>henkel</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="body">
     <header class="header">
-      <img class="header__logo" src="img/henkel-logo.png" alt="henkel logo" width="120px" height="60px">
+      <h1 class="visually-hidden">Информация о проектах</h1>
+      <img class="header__logo" src="img/henkel-logo.png" width="120" height="60" alt="Логотип компании Henkel">
       <button class="header__enter-btn" type="button">выйти</button>
     </header>
     <main class="main">
@@ -29,6 +22,7 @@
         </button>
       </div>
       <section class="menu">
+        <h2 class="visually-hidden">Меню сервиса</h2>
         <ul class="menu__list">
           <li class="menu__item">
             <button class="menu__button" data-tab-name='invest'>
@@ -55,7 +49,7 @@
           <li class="menu__item">
             <button class="menu__button" data-tab-name='catalog'>
               <span class="menu__button-text">каталог продуктов</span>
-              <svg class="menu__button-icon"" aria-hidden="true" focusable="false" width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="menu__button-icon" aria-hidden="true" focusable="false" width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M19.9244 0.941467L21.9225 2.98927L4.90696 20.4361L21.978 37.9376L19.9789 39.9854L0.910614 20.4361L19.9244 0.941467Z" fill="white"/>
               </svg>
             </button>
@@ -66,12 +60,14 @@
         </ul>
       </section>
       <section class="main__content">
-        <h2>content</h2>
-        <a href="item-inners.html">open item inners</a>
+        <h2>Список инвестиций</h2>
+        <a href="item-inners.html">Перейти к демонстрации открытого документа</a>
       </section>
     </main>
     <footer class="footer">
-
+      <a class="footer__link" href="http://www.unicorn.com.pl/index.htm#xl_xr_page_index" target="_blank">
+        <img class="footer__image" src="img/unicorn.jpg" width="120px" height="40px" alt="Unicorn логотип">
+      </a>
     </footer>
     <script src="js/bundle.js"></script>
 </body>
