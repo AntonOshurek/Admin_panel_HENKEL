@@ -6,6 +6,12 @@
   justify-content: space-between;
   align-items: center;
 
+  &--item-inners {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+  }
+
   @media (max-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -16,6 +22,11 @@
 .header__logo {
   width: 140px;
   height: 80px;
+
+  &--item-inners {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
 
   @media (max-width: @tablet-width) {
     grid-column-start: 2;
@@ -36,6 +47,10 @@
 
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   transition: 0.4s all;
+
+  &--item-inners {
+    justify-self: end;
+  }
 
   @media (max-width: @tablet-width) {
     justify-self: end;

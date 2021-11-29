@@ -10,6 +10,13 @@
     pointer-events: none;
   }
 
+  &--item-inners {
+    width: 1px;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+  }
+
   &--open {
     width: 280px;
     transition: all 0.5s ease-in-out;
@@ -86,6 +93,10 @@
   top: -90px;
   left: 0;
   display: none;
+
+  &--item-inners {
+    display: block;
+  }
 
   @media (max-width: @tablet-width) {
     display: block;
