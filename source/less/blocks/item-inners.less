@@ -1,18 +1,15 @@
 .item-inners {
   max-width: 100%;
-  padding: 20px;
   display: grid;
   grid-template-rows: min-content 1fr;
   grid-template-columns: 1fr;
   grid-row-gap: 25px;
-
-  @media (max-width: @mobile-width) {
-    padding: 5px 0;
-  }
 }
 
 .item-inners__controls {
   width: 100%;
+  min-width: min-content;
+  padding: 5px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,9 +55,9 @@
 .item-list {
   height: 100%;
   width: 100%;
-  overflow: scroll;
+  overflow-y: scroll;
   align-content: start;
-  padding: 10px 5px;
+  padding: 10px 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-row-gap: 15px;
@@ -77,8 +74,7 @@
 
 .item-list__elem {
   list-style: none;
-  //min-width: 350px;
-  //max-width: 350px;
+  min-width: 300px;
   height: min-content;
   border-radius: 6px;
   outline: 3px solid #808080;
